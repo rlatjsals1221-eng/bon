@@ -104,7 +104,7 @@ function searchStore() {
   [...targets].forEach((item) => {
     item.addEventListener("click", () => {
       console.dir(item);
-      window.location = "/order/type/?tf=" + item.attributes[0].value;
+      window.location = "/bon/order/type/?tf=" + item.attributes[0].value;
     });
   });
 
@@ -277,7 +277,7 @@ let stores = [];
 
 async function loadStores() {
   try {
-    const response = await fetch("/brand/store/data/store-data.json"); // 제이슨 파일 불러오기 수정 2.25
+    const response = await fetch("/bon/brand/store/data/store-data.json"); // 제이슨 파일 불러오기 수정 2.25
 
     stores = await response.json();
     console.log("JSON 로드 완료");
